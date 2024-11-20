@@ -1,4 +1,3 @@
-import React from "react";
 import "./Home.css";
 import ServiceCard from "./Service/Service.jsx";
 import Testimonial from "./Testimonial/Testimonial.jsx";
@@ -78,7 +77,9 @@ const Home = () => {
           Build a Distinctive Digital Identity: Where Strategy Meets Creativity
           to Define Your Unique Online Presence.
         </p>
-        <button className="cta-button">Get in Touch</button>
+        <a href="/contact">
+          <button className="cta-button">Get in Touch</button>
+        </a>
       </div>
       <div className="section2">
         <h1>We are one of the most effective Tech Solution Company</h1>
@@ -237,41 +238,41 @@ const Home = () => {
       <div className="box-container">
         <h1>Get in Touch</h1>
         <div className="touch">
-        <div className="contact-img">
-        <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89505.85425355299!2d80.88177913161047!3d26.87660488687303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf98c55c97199d7b%3A0xffb3b0de54faaa0e!2sBefog%20(A%26W%20Technologies)!5e0!3m2!1sen!2sin!4v1731913703747!5m2!1sen!2sin"
-        width="600"
-        height="650"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-        </div>
-        <div className="contact-details">
-          <div className="single-line">
-            <form>
-              <label htmlFor="">Name</label>
-              <input type="text" placeholder="Name" />
-            </form>
-            <form>
-            <label htmlFor="">Phone Number</label>
-              <input type="tel" placeholder="Phone Number" />
-            </form>
+          <div className="contact-img">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89505.85425355299!2d80.88177913161047!3d26.87660488687303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf98c55c97199d7b%3A0xffb3b0de54faaa0e!2sBefog%20(A%26W%20Technologies)!5e0!3m2!1sen!2sin!4v1731913703747!5m2!1sen!2sin"
+              width="600"
+              height="650"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
-          <form>
-          <label htmlFor="">Email Address</label>
-            <input type="email" placeholder="Email Address" />
-          </form>
-          <form>
-          <label htmlFor="">Message</label>
-            <textarea placeholder="Message"></textarea>
-          </form>
-          <button>SEND MESSAGE</button>
+          <div className="contact-details">
+            <div className="single-line">
+              <form>
+                <label htmlFor="">Name</label>
+                <input type="text" placeholder="Name" />
+              </form>
+              <form>
+                <label htmlFor="">Phone Number</label>
+                <input type="tel" placeholder="Phone Number" />
+              </form>
+            </div>
+            <form>
+              <label htmlFor="">Email Address</label>
+              <input type="email" placeholder="Email Address" />
+            </form>
+            <form>
+              <label htmlFor="">Message</label>
+              <textarea placeholder="Message"></textarea>
+            </form>
+            <button>SEND MESSAGE</button>
+          </div>
         </div>
       </div>
-      </div>
-      
+
     </header>
   );
 };
