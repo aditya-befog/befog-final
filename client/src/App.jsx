@@ -15,6 +15,7 @@ import Web from './pages/Webpage/Web';
 import Social from './pages/Social Media/Social';
 import Digital from './pages/Digital Marketing/Digital';
 import Strategy from './pages/Content Strategy/strategy';
+import GoogleTranslate from './compoment/GoogleTranslate';
 
 
 const theme = {
@@ -41,6 +42,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <GoogleTranslate />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/services' element={<Service />} />

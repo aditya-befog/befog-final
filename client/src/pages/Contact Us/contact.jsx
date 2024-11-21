@@ -16,7 +16,6 @@ function Contact() {
     message: "",
   });
 
-
   // Google Sheet Integration
   const handleSubmitGoogleForm = async () => {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyRl6DC7lpk_qby1vyEHWCqb7bq_IJmTtkXwgDkpwGWO7zzVRo97_V598BVDxHv6AycmA/exec'
