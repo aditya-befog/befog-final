@@ -9,6 +9,7 @@ import { useState } from "react";
 
 function Contact() {
   const VITE_SERVER_PORT = import.meta.env.VITE_SERVER_PORT || "http://localhost:5000";
+  const GOOGLE_FORM_SCRIPT = import.meta.env.REACT_APP_GOOGLE_SCRIPT_URL
 
   const [formData, setFormData] = useState({
     name: "",
@@ -20,7 +21,7 @@ function Contact() {
 
   // Google Sheet Integration
   const handleSubmitGoogleForm = async () => {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyRl6DC7lpk_qby1vyEHWCqb7bq_IJmTtkXwgDkpwGWO7zzVRo97_V598BVDxHv6AycmA/exec';
+    const scriptURL = GOOGLE_FORM_SCRIPT;
     const form = document.forms['submit-to-google-sheet'];
 
     const formData = new FormData(form);

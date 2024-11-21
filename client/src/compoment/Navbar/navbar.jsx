@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./navbar.css";
 import logo from "../../assets/befog_logo.svg";
 import { FaBars, FaTimes, FaGlobe, FaChevronDown } from "react-icons/fa";
