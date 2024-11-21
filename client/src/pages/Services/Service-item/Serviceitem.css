@@ -29,11 +29,12 @@
   font-size: 2rem;
   background: #d9d9d90d;
   height: 210px;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .service-item .icon:hover {
   box-shadow: 0 0 10px 5px orange;
+  transform: scale(1.1);
 }
 
 .service-item .icon img {

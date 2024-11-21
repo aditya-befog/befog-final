@@ -1,10 +1,12 @@
-html, body {
-  /* height: 100vh; */
+html,
+body {
   width: 100vw;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  background: linear-gradient(135deg, #170012, #060613);
 }
+
 .header {
   display: flex;
   flex-direction: column;
@@ -13,18 +15,78 @@ html, body {
   background: linear-gradient(135deg, #170012, #060613);
 }
 
+/* Section Styling */
 .section1 {
   color: white;
   padding: 15% 2%;
-  background: url("../../assets/img/bg.png") no-repeat;
-  height: 1;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  position: relative;
+  transition: background 1s ease; /* Smooth transition for background */
 }
 
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%; /* Vertically center the buttons */
+  transform: translateY(-50%);
+  font-size: 2rem; /* Adjust the size of the arrows */
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-button {
+  left: 10%;
+}
+
+.next-button {
+  right: 10%;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  color: #00aaff;
+}
+
+@media (max-width: 1024px) {
+  .prev-button,
+  .next-button {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prev-button,
+  .next-button {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev-button,
+  .next-button {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  .slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}
+/* Title Styling */
 .section1 h1 {
   font-size: 4rem;
   margin-bottom: 20px;
@@ -34,11 +96,13 @@ html, body {
   color: transparent;
 }
 
+/* Paragraph Styling */
 .section1 p {
   font-size: 1.2rem;
   margin-bottom: 40px;
 }
 
+/* Button Styling */
 .section1 .cta-button {
   padding: 12px 24px;
   font-size: 1rem;
@@ -67,6 +131,53 @@ html, body {
   color: #f3f3f3;
 }
 
+/* Slider Controls */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 108vw;
+}
+
+.slider-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .slider-controls button {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-controls button {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-controls button {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+.slider-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .section1 {
     padding: 0% 15px;
@@ -216,7 +327,7 @@ html, body {
 }
 
 .service-card .icon:hover {
-  box-shadow: 0 0 10px 5px orange;
+  box-shadow: inset 0 0 10px 5px orange;
 }
 
 .icon {
@@ -277,7 +388,7 @@ html, body {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 2rem 0 5rem 7rem;
+  margin: 0 0 0rem 7rem;
 }
 
 .feature-strategy-1 {
@@ -329,6 +440,45 @@ html, body {
   background: #c4c4c433;
 }
 
+.arrowleft {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowleft img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 8rem 3rem 0 11rem;
+}
+
+.arrowleft1 {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowleft1 img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: -7rem 3rem 0 -19rem;
+}
+
+.arrowRight {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowRight img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: -7rem 3rem 0 32rem;
+}
+
 .Develop-strategy-container {
   display: flex;
   flex-direction: row;
@@ -350,8 +500,14 @@ html, body {
   padding: 2rem;
 }
 
-.feature-circle:hover{
-  box-shadow: 0 0 10px 5px orange;
+.feature-circle:hover {
+  box-shadow: inset 0 0 10px 5px orange;
+}
+
+.feature-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .feature-text p {
@@ -384,6 +540,18 @@ html, body {
 
   .feature-title h2 {
     font-size: 40px;
+  }
+
+  .arrowleft {
+    display: none;
+  }
+
+  .arrowleft1 {
+    display: none;
+  }
+
+  .arrowRight {
+    display: none;
   }
 
   .feature-strategy-container {
@@ -449,6 +617,18 @@ html, body {
     text-align: center;
     font-size: 10px;
     margin: 0 -1rem;
+  }
+  .feature-circle {
+    width: 85px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+  }
+  .feature-circle img {
+    width: 54px;
+    height: 51px;
+    object-fit: cover;
+    margin: -1rem 1rem 2rem -1rem;
   }
 }
 
@@ -545,16 +725,39 @@ html, body {
 }
 
 .Design-circle {
-  width: 157px;
-  height: 142px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background-color: #c4c4c4;
-  padding: 4rem;
-  margin: 0px 2rem;
+  padding: 2rem;
 }
 
-.Design-circle:hover{
-  box-shadow: 0 0 10px 5px orange;
+.Design-circle:hover {
+  box-shadow: inset 0 0 10px 5px orange;
+}
+
+.Design-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Support-circle {
+  width: 180px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  padding: 2rem;
+}
+
+.Support-circle:hover {
+  box-shadow: inset 0 0 10px 5px orange;
+}
+
+.Support-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .feature-text p {
@@ -651,13 +854,26 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  .Design-circle {
+  .Design-circle,
+  .Support-circle {
     width: 90px;
     height: 65px;
     border-radius: 50%;
     background-color: #c4c4c4;
     margin: 0 0 0 3.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image stays within the circle */
   }
+
+  .Design-circle img,
+  .Support-circle img {
+    width: 54px;
+    height: 51px;
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+  }
+
   .Design-strategy {
     width: 100vw;
     margin-left: 0;
@@ -887,8 +1103,12 @@ html, body {
 }
 
 .button button:hover {
-  color: #fff;
-  background-color: #ff9900;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 244, 255, 0.19) 0%,
+    rgba(113, 122, 253, 0.19) 50.51%,
+    rgba(254, 1, 229, 0.19) 100%
+  );
 }
 
 .Founder {
@@ -919,10 +1139,12 @@ html, body {
   max-width: 80%;
   color: #ffffff;
   background: #d9d9d917;
+  backdrop-filter: blur(5px);
   border: 1px solid #ffffff80;
   padding: 3rem 5rem 3rem 1rem;
   border-radius: 5px;
   text-align: left;
+  z-index: 1;
 }
 
 .text-content h3 {
@@ -950,7 +1172,12 @@ html, body {
 }
 
 .text-content button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 244, 255, 0.19) 0%,
+    rgba(113, 122, 253, 0.19) 50.51%,
+    rgba(254, 1, 229, 0.19) 100%
+  );
 }
 
 .founder-img {
@@ -961,6 +1188,7 @@ html, body {
   border-radius: 7.5px 0px 0px 0px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
+  z-index: 2;
 }
 
 .founder-img img {
@@ -1035,7 +1263,13 @@ html, body {
 }
 
 .Founder-button button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 244, 255, 0.19) 0%,
+    rgba(113, 122, 253, 0.19) 50.51%,
+    rgba(254, 1, 229, 0.19) 100%
+  );
+  color: #f3f3f3;
 }
 
 .testimonial-body {

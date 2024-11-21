@@ -1,6 +1,18 @@
+import { useEffect, useState } from 'react';
 import "./Home.css";
 import ServiceCard from "./Service/Service.jsx";
 import Testimonial from "./Testimonial/Testimonial.jsx";
+import leftArrow from "../../assets/img/Line1.png";
+import rightArrow from "../../assets/img/Line2.png";
+import strategy5 from "../../assets/img/strategy5.png";
+import support from "../../assets/img/support.png";
+import design5 from "../../assets/img/design-thinking.png";
+import feature from "../../assets/img/coding.png";
+import background from "../../assets/img/bg.png";
+import secback from "../../assets/img/bg5.jpg";
+import thirdback from "../../assets/img/bg6.jpg";
+import fourthback from "../../assets/img/bg55.jpg";
+import founder from "../../assets/img/sanjay-sir.webp";
 
 const services = [
   {
@@ -41,37 +53,66 @@ const services = [
   },
 ];
 
-const steps = [
-  {
-    number: 1,
-    title: "Strategy",
-    description:
-      "We begin our journey by analyzing your business objectives and end-user requirements to create a draft of Low-Fidelity Wireframes.",
-  },
-  {
-    number: 2,
-    title: "Design",
-    description:
-      "We design and draft the appearance, feel, and functionality of your product.",
-  },
-  {
-    number: 3,
-    title: "Develop",
-    description:
-      "We use Agile methodology to collaborate and iterate on the product design and development until we achieve flawless UX/UI functionality and experience.",
-  },
-  {
-    number: 4,
-    title: "Support",
-    description:
-      "We provide maintenance and support if required. We monitor the performance of your website/application, fix bugs, and develop new functionalities.",
-  },
-];
+// const steps = [
+//   {
+//     number: 1,
+//     title: "Strategy",
+//     description:
+//       "We begin our journey by analyzing your business objectives and end-user requirements to create a draft of Low-Fidelity Wireframes.",
+//   },
+//   {
+//     number: 2,
+//     title: "Design",
+//     description:
+//       "We design and draft the appearance, feel, and functionality of your product.",
+//   },
+//   {
+//     number: 3,
+//     title: "Develop",
+//     description:
+//       "We use Agile methodology to collaborate and iterate on the product design and development until we achieve flawless UX/UI functionality and experience.",
+//   },
+//   {
+//     number: 4,
+//     title: "Support",
+//     description:
+//       "We provide maintenance and support if required. We monitor the performance of your website/application, fix bugs, and develop new functionalities.",
+//   },
+// ];
 
 const Home = () => {
+  const images = [
+    background,
+    secback,
+    thirdback,
+    fourthback,
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+
   return (
     <header className="header">
-      <div className="section1">
+      <div
+        className="section1"
+        style={{ backgroundImage: `url(${images[currentIndex]})` }}
+      >
         <h1>Design Your Digital Identity</h1>
         <p>
           Build a Distinctive Digital Identity: Where Strategy Meets Creativity
@@ -80,7 +121,16 @@ const Home = () => {
         <a href="/contact">
           <button className="cta-button">Get in Touch</button>
         </a>
+        <div className="slider-controls">
+          <button className="prev-button" onClick={handlePrev}>
+            ←
+          </button>
+          <button className="next-button" onClick={handleNext}>
+            →
+          </button>
+        </div>
       </div>
+
       <div className="section2">
         <h1>We are one of the most effective Tech Solution Company</h1>
         <p>
@@ -108,8 +158,14 @@ const Home = () => {
               <h2>Strategy</h2>
             </div>
           </div>
+          <div className="arrowleft">
+            <img src={leftArrow} alt="Arrow Left" />
+          </div>
+
           <div className="feature-strategy-container">
-            <div className="feature-circle"></div>
+            <div className="feature-circle">
+              <img src={strategy5} alt="" />
+            </div>
             <div className="feature-text">
               <p>
                 We begin our journey by analyzing your business objectives and
@@ -129,7 +185,9 @@ const Home = () => {
             </div>
           </div>
           <div className="Design-strategy-container">
-            <div className="Design-circle"></div>
+            <div className="Design-circle">
+              <img src={design5} alt="" />
+            </div>
             <div className="Design-text">
               <p>
                 We design and draft the appearance, feel, and functionality of
@@ -137,6 +195,9 @@ const Home = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="arrowRight">
+          <img src={rightArrow} alt="Arrow Left" />
         </div>
         <div className="feature-strategy">
           <div className="feature-strategy-1">
@@ -148,7 +209,9 @@ const Home = () => {
             </div>
           </div>
           <div className="Develop-strategy-container">
-            <div className="feature-circle"></div>
+            <div className="feature-circle">
+              <img src={feature} alt="" />
+            </div>
             <div className="feature-text">
               <p>
                 We use Agile methodology to collaborate and iterate on the
@@ -157,6 +220,9 @@ const Home = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="arrowleft1">
+          <img src={leftArrow} alt="Arrow Left" />
         </div>
         <div className="Design-strategy">
           <div className="Design-strategy-1">
@@ -168,7 +234,9 @@ const Home = () => {
             </div>
           </div>
           <div className="Support-strategy-container">
-            <div className="Design-circle"></div>
+            <div className="Support-circle">
+              <img src={support} alt="" />
+            </div>
             <div className="Design-text">
               <p>
                 We provide maintenance and support if required. We monitor the
@@ -209,7 +277,7 @@ const Home = () => {
           </div>
           <div className="founder-img">
             <img
-              src="https://images.unsplash.com/photo-1719937050640-71cfd3d851be?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={founder}
               alt="Founder"
             />
           </div>
@@ -272,7 +340,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
     </header>
   );
 };

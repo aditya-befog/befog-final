@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaGoogle, FaLinkedinIn } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faLinkedinIn,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./footer.css";
 import logo from "../../assets/picsvg.svg";
 
@@ -10,69 +16,66 @@ const Footer = () => {
         <img src={logo} alt="Logo" className="footer-logo" />
       </div>
       <div className="footer-content">
-        <p className="footer-text">Befog(A&W Technology)</p>
+        <p className="footer-text">Befog (A&W Technology)</p>
         <div className="social-icons">
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFacebookF className="icon" />
+            <FontAwesomeIcon icon={faFacebookF} className="icon" />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter className="icon" />
+            <FontAwesomeIcon icon={faXTwitter} className="icon" />
           </a>
           <a
-            href="https://google.com"
+            href="mailto:Befog@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGoogle className="icon" />
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
           </a>
           <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedinIn className="icon" />
+            <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
           </a>
         </div>
       </div>
       <div className="footer-wrapper">
-  <div className="left">
-    <p className="footer-p">Company</p>
-    <ul className="footer-ul">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div>
-  <div className="center">
-    <p className="footer-p">Services</p>
-    <ul className="footer-ul">
-      <li><a href="/uiux">UI/UX</a></li>
-      <li><a href="/web">WEB DEVELOPMENT</a></li>
-      <li><a href="/Digital">DIGITAL MARKETING</a></li>
-      <li><a href="/Business">BUSINESS CONSULTANCY SERVICE</a></li>
-      <li><a href="/Social">Social Media Marketing</a></li>
-      <li><a href="/strategy">Content Strategy</a></li>
-      <li><a href="/paid">Paid Advertising</a></li>
-    </ul>
-  </div>
-  <div className="right">
-    <p className="footer-p">Get in Touch</p>
-    <ul className="footer-ul">
-      <li><a href="">+1-222-454-7890</a></li>
-      <li><a href="">Befog@gmail.com</a></li>
-    </ul>
-  </div>
-</div>
-
+        <div className="left">
+          <p className="footer-p">Company</p>
+          <ul className="footer-ul">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div className="center">
+          <p className="footer-p">Services</p>
+          <ul className="footer-ul">
+            <li><a href="/uiux">UI/UX</a></li>
+            <li><a href="/web">Web Development</a></li>
+            <li><a href="/digital">Digital Marketing</a></li>
+            <li><a href="/social">Social Media Marketing</a></li>
+            <li><a href="/strategy">Content Strategy</a></li>
+          </ul>
+        </div>
+        <div className="right">
+          <p className="footer-p">Get in Touch</p>
+          <ul className="footer-ul">
+            <li><a href="tel:+12224547890">+1-222-454-7890</a></li>
+            <li><a href="mailto:Befog@gmail.com">Befog@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   );
 };

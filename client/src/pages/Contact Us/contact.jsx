@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useState } from "react";
 
-
 function Contact() {
   const VITE_SERVER_PORT = import.meta.env.VITE_SERVER_PORT || "http://localhost:5000";
 

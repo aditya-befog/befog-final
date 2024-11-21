@@ -184,7 +184,7 @@ html, body{
 }
 
 .service-box:hover{
-  box-shadow: 0 0 10px 5px orange;
+  box-shadow: inset 0 0 10px 5px orange;
 }
 
 .service-box h1 {
@@ -275,7 +275,7 @@ html, body{
 }
 
 .work-box:hover{
-  box-shadow: 0 0 10px 5px orange;
+  box-shadow: inset 0 0 10px 5px orange;
 }
 
 .work-box h3 {

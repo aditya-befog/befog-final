@@ -150,6 +150,7 @@ a {
   align-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 0rem 4rem;
 }
 
 .services-container h1 {
@@ -226,6 +227,7 @@ a {
   .services-container {
     flex-direction: column;
     gap: 10px;
+    margin: 0rem 0rem -1rem -1rem;
   }
 
   h1 {

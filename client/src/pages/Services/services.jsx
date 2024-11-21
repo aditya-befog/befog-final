@@ -1,16 +1,15 @@
 // src/App.js
+import React from "react";
 import ServiceCard from "./ServicesCard/ServicesCard";
 import "./services.css";
 import Serviceitem from "./Service-item/Serviceitem";
 import whatsapp from "../../assets/img/whatsapp.png";
 import pen from "../../assets/img/pen.png";
-import ui from "../../assets/img/uiux2.png";
-import web from "../../assets/img/web2.png";
-import dig from "../../assets/img/digital2.png";
-import bus from "../../assets/img/Business2.png";
+import ui from "../../assets/img/uiux.png";
+import web from "../../assets/img/web.png";
+import dig from "../../assets/img/digital.png";
 import soc from "../../assets/img/social2.png";
-import con from "../../assets/img/strategy2.png";
-import paid from "../../assets/img/paid2.png";
+import con from "../../assets/img/strategy-.png";
 import weui from "../../assets/img/s-ui.png";
 import wedev from "../../assets/img/s-web.png";
 import wedeg from "../../assets/img/s-deg.png";
@@ -35,12 +34,7 @@ const serviceitem = [
     redirectUrl:"/Digital",
     icon:dig,
   },
-  {
-    title: "BUSINESS CONSULTANCY SERVICE",
-    description: "",
-    redirectUrl:"/Business",
-    icon:bus,
-  },
+  
   {
     title: "Social Media Marketing",
     description: "",
@@ -53,12 +47,7 @@ const serviceitem = [
     redirectUrl:"/strategy",
     icon:con,
   },
-  {
-    title: "Paid Advertising",
-    description: "",
-    redirectUrl:"/paid",
-    icon:paid,
-  },
+  
 ];
 
 const service = [
