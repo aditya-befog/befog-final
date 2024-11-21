@@ -1,5 +1,4 @@
 // src/App.js
-import React from "react";
 import ServiceCard from "./ServicesCard/ServicesCard";
 import "./services.css";
 import Serviceitem from "./Service-item/Serviceitem";
