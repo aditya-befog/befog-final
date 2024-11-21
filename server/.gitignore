@@ -1,5 +1,5 @@
 # Ignore the files
 
 node_modules
-.env*
+.env
 dist
