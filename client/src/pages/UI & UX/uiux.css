@@ -61,7 +61,6 @@ html, body{
   border-image-source: linear-gradient(90deg, #00f7ff 0%, #6584ff 51.01%, #ff00e5 100%);
   border-image-slice: 1;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin: 3rem 0;
 }

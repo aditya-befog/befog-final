@@ -1,3 +1,7 @@
+:root {
+  background-color: black;
+}
+
 html,
 body {
   width: 100vw;
@@ -12,20 +16,44 @@ body {
   flex-direction: column;
   text-align: center;
   height: auto;
-  background: linear-gradient(135deg, #170012, #060613);
+  background: linear-gradient(
+    90deg,
+    rgb(9 9 12) 18%,
+    rgb(11, 4, 15) 30%,
+    rgb(20, 0, 16) 57%,
+    rgb(13, 1, 10) 100%
+  );
 }
 
 /* Section Styling */
 .section1 {
   color: white;
   padding: 15% 2%;
-  height: 100vh;
+  height: 89vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   overflow: hidden;
   position: relative;
   transition: background 1s ease; /* Smooth transition for background */
+}
+
+.section1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    90deg,
+    rgb(9 9 12) 18%,
+    rgb(11, 4, 15) 30%,
+    rgb(20, 0, 16) 57%,
+    rgb(13, 1, 10) 100%
+  );
+  clip-path: polygon(0 85%, 52% 100%, 100% 84%, 100% 100%, 52% 100%, 0 100%);
+  z-index: 1;
 }
 
 .prev-button,
@@ -249,7 +277,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #060613;
+  background: rgb(32, 13, 30);
+  background: linear-gradient(
+    90deg,
+    rgb(9 9 12) 18%,
+    rgb(11, 4, 15) 30%,
+    rgb(20, 0, 16) 57%,
+    rgb(13, 1, 10) 100%
+  );
 }
 
 .section2 h1 {
@@ -308,6 +343,13 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  background: linear-gradient(
+    90deg,
+    rgb(9 9 12) 18%,
+    rgb(11, 4, 15) 30%,
+    rgb(20, 0, 16) 57%,
+    rgb(13, 1, 10) 100%
+  );
 }
 
 .service-card {

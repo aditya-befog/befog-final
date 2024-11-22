@@ -6,7 +6,13 @@
 }
 
 .Contact {
-  background: linear-gradient(135deg, #170012, #060613);
+  background: linear-gradient(
+    90deg,
+    rgb(9 9 12) 18%,
+    rgb(11, 4, 15) 30%,
+    rgb(20, 0, 16) 57%,
+    rgb(13, 1, 10) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +107,6 @@
 .contact-img {
   background-color: #ddd;
   width: 100%;
-  height: 100vh;
 }
 
 .contact-img iframe {
@@ -134,7 +139,7 @@
   border-radius: 4px;
   outline: none;
   color: white;
-  background: #0000000D;
+  background: #0000000d;
 }
 
 .contact-details textarea {
@@ -149,7 +154,7 @@
 
 .contact-details button {
   padding: 10px 20px;
-  background: #FF7A00;
+  background: #ff7a00;
   color: white;
   border: none;
   cursor: pointer;
@@ -160,9 +165,8 @@
 }
 
 .contact-details button:hover {
-  background-color: #FF7A49;
+  background-color: #ff7a49;
 }
-
 
 @media (min-width: 768px) {
   .touch {
@@ -238,5 +242,3 @@
     padding: 1rem;
   }
 }
-
-  

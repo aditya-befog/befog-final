@@ -1,4 +1,3 @@
-import React from "react";
 import './Digital.css';
 
 const services = [
@@ -41,7 +40,9 @@ function Digital() {
             Nurture Your Vision, Magnify Your Brand & Increase Your Sales with
             Inspiring Digital Marketing Solutions
           </p>
-          <button className="contact-button">Get in Touch</button>
+          <a href="/contact">
+            <button style={{ cursor: 'pointer' }} className="contact-button">Get in Touch</button>
+          </a>
         </div>
         <div className="image-section">
           <div className="ui-img">

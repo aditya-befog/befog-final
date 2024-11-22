@@ -173,7 +173,6 @@ a {
   );
   border-image-slice: 1;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -349,7 +348,6 @@ a {
   );
   border-image-slice: 1;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-bottom: 4rem;
   display: inline-block;

@@ -12,10 +12,6 @@
   justify-content: flex-end;
 }
 
-.icon {
-  cursor: pointer;
-}
-
 .service-item .icon {
   padding: 20px;
   margin: 10px;

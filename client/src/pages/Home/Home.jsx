@@ -119,7 +119,7 @@ const Home = () => {
           to Define Your Unique Online Presence.
         </p>
         <a href="/contact">
-          <button className="cta-button">Get in Touch</button>
+          <button style={{cursor: 'pointer'}} className="cta-button">Get in Touch</button>
         </a>
         <div className="slider-controls">
           <button className="prev-button" onClick={handlePrev}>
@@ -284,7 +284,7 @@ const Home = () => {
         </div>
       </div>
       <div className="Founder-button">
-        <button>View all Team</button>
+        <button style={{cursor: "default"}}>View all Team</button>
       </div>
       <div className="testimonial-body">
         <div className="testimonial-section">

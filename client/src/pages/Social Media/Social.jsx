@@ -1,4 +1,3 @@
-import React from "react";
 import "./Social.css";
 
 const services = [
@@ -37,7 +36,9 @@ function Social() {
             Improve Your Market Reach. Build Loyal Customers - with Creative and
             Intelligent Social Media Marketing Strategies
           </p>
-          <button className="contact-button">Get in Touch</button>
+          <a href="/contact">
+            <button style={{ cursor: 'pointer' }} className="contact-button">Get in Touch</button>
+          </a>
         </div>
         <div className="image-section">
           <div className="ui-img">

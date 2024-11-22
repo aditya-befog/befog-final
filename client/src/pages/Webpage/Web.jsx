@@ -1,4 +1,3 @@
-import React from "react";
 import "./Web.css";
 
 const services = [
@@ -40,7 +39,9 @@ function Web() {
             We are Creative Nerds. We are Technocrats. But We are Passionate
             about creating a Successful Brand for You!!!
           </p>
-          <button className="contact-button">Get in Touch</button>
+          <a href="/contact">
+            <button style={{cursor: 'pointer'}} className="contact-button">Get in Touch</button>
+          </a>
         </div>
         <div className="image-section">
           <div className="ui-img">

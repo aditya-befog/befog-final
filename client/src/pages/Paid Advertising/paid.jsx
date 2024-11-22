@@ -1,4 +1,3 @@
-import React from "react";
 import "./paid.css";
 
 const services = [
@@ -37,7 +36,9 @@ function paid() {
             Build, Grow, and Boost your business revenue by focusing on core
             strategy — attract, convert, and retain customers forever!!!
           </p>
-          <button className="contact-button">Get in Touch</button>
+          <a href="/contact">
+            <button style={{ cursor: 'pointer' }} className="contact-button">Get in Touch</button>
+          </a>
         </div>
         <div className="image-section">
           <div className="ui-img">

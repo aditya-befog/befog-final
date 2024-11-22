@@ -1,5 +1,4 @@
 // src/App.js
-import React from "react";
 import ServiceCard from "./ServicesCard/ServicesCard";
 import "./services.css";
 import Serviceitem from "./Service-item/Serviceitem";
@@ -19,35 +18,35 @@ const serviceitem = [
   {
     title: "UI/UX DESIGN",
     description: "",
-    redirectUrl:"/uiux",
-    icon:ui,
+    redirectUrl: "/uiux",
+    icon: ui,
   },
   {
     title: "WEB DEVELOPMENT",
     description: "",
-    redirectUrl:"/web",
-    icon:web,
+    redirectUrl: "/web",
+    icon: web,
   },
   {
     title: "DIGITAL MARKETING",
     description: "",
-    redirectUrl:"/Digital",
-    icon:dig,
+    redirectUrl: "/Digital",
+    icon: dig,
   },
-  
+
   {
     title: "Social Media Marketing",
     description: "",
-    redirectUrl:"/Social",
-    icon:soc,
+    redirectUrl: "/Social",
+    icon: soc,
   },
   {
     title: "Content Strategy",
     description: "",
-    redirectUrl:"/strategy",
-    icon:con,
+    redirectUrl: "/strategy",
+    icon: con,
   },
-  
+
 ];
 
 const service = [
@@ -110,7 +109,9 @@ const Services = () => {
             <Serviceitem key={index} {...service} />
           ))}
         </div>
-        <button className="consult-button">Book Free Consultant</button>
+        <a href="/contact">
+          <button style={{ cursor: 'pointer' }} className="consult-button">Book Free Consultant</button>
+        </a>
       </div>
       <div className="contact">
         <div className="callUs">
@@ -129,7 +130,9 @@ const Services = () => {
         </div>
       </div>
       <p className="last-text">Grow your careers at the heart of change</p>
-      <button className="cta-button">Get in Touch</button>
+      <a href="/contact">
+        <button style={{ cursor: 'pointer' }} className="cta-button">Get in Touch</button>
+      </a>
     </div>
   );
 };

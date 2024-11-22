@@ -1,12 +1,11 @@
-import React from "react";
 import "./strategy.css";
 
 const services = [
-    { title: "Content Production" },
-    { title: "Content Marketing" },
-    { title: "Tailored Content Creation & Marketing" },
-    { title: "Awareness, Engagement& Retention" },
-  ];
+  { title: "Content Production" },
+  { title: "Content Marketing" },
+  { title: "Tailored Content Creation & Marketing" },
+  { title: "Awareness, Engagement& Retention" },
+];
 
 const workservices = [
   {
@@ -37,7 +36,9 @@ function strategy() {
             Improve Your Brand’s Value Proposition, Customer Engagement,
             Retention, and Sales with Growth-Oriented Content Marketing Strategy
           </p>
-          <button className="contact-button">Get in Touch</button>
+          <a href="/contact">
+            <button style={{ cursor: 'pointer' }} className="contact-button">Get in Touch</button>
+          </a>
         </div>
         <div className="image-section">
           <div className="ui-img">
@@ -61,11 +62,11 @@ function strategy() {
           <ul>
             <li>Served 150+ clients globally.</li>
             <li>
-            Our team includes Google-certified professionals.
+              Our team includes Google-certified professionals.
             </li>
             <li>Our precise Content Marketing solutions are budget-friendly.</li>
             <li>
-            Our solutions are industry standard compliant, which makes us trustworthy & credible.
+              Our solutions are industry standard compliant, which makes us trustworthy & credible.
             </li>
           </ul>
         </div>
