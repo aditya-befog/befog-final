@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import './GoogleTranslate.css';
 
 const GoogleTranslate = () => {
     useEffect(() => {
@@ -22,19 +23,7 @@ const GoogleTranslate = () => {
     }, []);
 
     return (
-        <div
-            className="gtranslate_wrapper"
-            style={{
-                position: "fixed",
-                bottom: "10px",
-                right: "10px",
-                zIndex: 9999,
-                width: "120px",
-                height: "30px",
-                overflow: "hidden",
-            }}
-        >
-        </div>
+        <div className="gtranslate_wrapper" ></div>
     );
 };
 

@@ -15,7 +15,7 @@ import Web from './pages/Webpage/Web';
 import Social from './pages/Social Media/Social';
 import Digital from './pages/Digital Marketing/Digital';
 import Strategy from './pages/Content Strategy/strategy';
-import GoogleTranslate from './compoment/GoogleTranslate';
+import GoogleTranslate from './compoment/GoogleTranslate/GoogleTranslate';
 
 
 const theme = {
