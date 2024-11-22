@@ -1,7 +1,6 @@
 /* Google Translate CSS */
 .gt_float_switcher.notranslate {
   background-color: #0a0412;
-  rotate: 180deg;
 }
 
 .gt_float_switcher .gt-selected .gt-current-lang {
@@ -11,14 +10,6 @@
   background-color: #0a0412;
 }
 
-.nturl {
-  rotate: 180deg;
-}
-
-.gt-current-lang{
-  rotate: 180deg;
-}
-
 .gt_options .gt-open a {
   color: white;
 }
@@ -26,10 +17,6 @@
 .gt-lang-code,
 .nturl {
   color: white;
-}
-
-#gt_float_wrapper {
-  left: 80% !important;
 }
 
 .gt_float_switcher,
